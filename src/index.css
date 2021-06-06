@@ -1,13 +1,93 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html,body{
+    height: 100%;
+    margin: 0;
+    background-color: #ffffff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.lista_itens{
+    width: fit-content;
+    height: fit-content;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    border-radius: 5%;
+    background-color: #f5f5f5;
+
+
+}
+
+.item_list{
+    margin: 5%;
+    font-family: "Open Sans", verdana, arial, sans-serif;
+}
+
+.title_list{
+    text-align: center;
+    margin: 5%;
+    font-family: "Open Sans", verdana, arial, sans-serif;
+}
+
+.graph{
+    box-shadow: 10px 10px 5px #aaaaaa;
+    border-radius: 5%;
+    width: min-content;
+    height: min-content;
+    position: relative;
+    margin-bottom: 2%;
+    background-color: #f5f5f5;
+
+}
+
+.title{
+    text-align: center;
+    order: 0;
+    width: 100%;
+    height: 5%;
+    font-weight: bold;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.collumn{
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+.content{
+    background-color: #ffffff;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.button_btn{
+    background-color: transparent;
+    border-color: transparent;
+    font-size: medium;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    color: #f5f5f5;
+    font-style: normal;
+}
+
+.side-bar{
+    display: flex;
+    flex-direction: column;
+    width: 10vw;
+    background-color: #4c4154;
+    height: 100vh;
+    padding-top: 1vh;
+}
+
+.item{
+    margin: 5%;
+    width: 80%;
+    padding: 5%;
+    background-color: transparent;
+    border-radius: 8%;
+    text-align: center;
+    
 }
