@@ -4,6 +4,10 @@ html,body{
     background-color: #ffffff;
 }
 
+.upload{
+    background-color: burlywood;
+}
+
 .lista_itens{
     width: fit-content;
     height: fit-content;
