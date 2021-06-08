@@ -180,7 +180,6 @@ class Content extends React.Component {
     render() {
         return (
             <div className="content">
-                <h1 className="title">Ez Dash</h1>
                 <Graph title="Rendimentos Semanais" data={this.props.weekSells} type="csv-data" />
                 <ListaItens text="Alerta: estoque baixo" />
                 <ListaItens text="Mais Vendidos da Semana" />
@@ -204,11 +203,12 @@ function ListaItens(props) {
     );
 
     return (
-        <ol className="lista_itens">
-            <h1 className="title_list">{props.text}</h1>
-            {listItems}
-        </ol>
-
+        <div className="contentBox">
+            <ol>
+                <h1 className="title_list">{props.text}</h1>
+                {listItems}
+            </ol>
+        </div>
     );
 
 }
@@ -217,7 +217,7 @@ function Graph(props) {
 
     if (props.type === "csv-data") {
         return (
-            <div className="graph">
+            <div className="contentBox">
                 <Plot
                     data={[
                         {
@@ -263,10 +263,9 @@ function Graph(props) {
 function SideBar() {
     return (
         <div className="side-bar">
+            <h1 id="title">EZD</h1>    
             <SideBarButton text="Home" pth="/" />
             <SideBarButton text="Vendas" pth="/vendas" />
-            <SideBarButton text="Clientes" pth="/clientes" />
-            <SideBarButton text="Produtos" pth="/produtos" />
         </div>
 
 
@@ -290,6 +289,8 @@ function Vendas(props) {
     return (
         <div className="collumn">
             <SideBar />
+            {/* teste */}
+            <p>é o tal do passeio</p>
         </div>
     );
 
@@ -299,6 +300,7 @@ function AddArquivo(props) {
     return (
         <div className="collumn">
             <SideBar />
+            {/* tem que trocar o texto disso aqui pra português */}
             <Upload handleFileContent={props.handleFileContent} />
         </div>
     );
@@ -311,6 +313,16 @@ function SideBarButton(props) {
         </div>
     );
 }
+
+
+function ListaVendas() {
+
+}
+
+function AdicionaVenda() {
+
+}
+
 
 ReactDOM.render(
     <App />
